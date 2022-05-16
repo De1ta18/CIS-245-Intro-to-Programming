@@ -1,0 +1,46 @@
+import random
+import time
+
+def displayIntro():
+    print('''You are in a land full of dragons. In front of you, 
+    you see two caves. In one cave, the dragon is friendly
+    and will share his treasure with you. The other dragon
+    is greedy and hungry, and will eat you on sight.''')
+    print()
+
+def chooseCave():  #This code doesn't work properly. If you enter anything other than 1 or 2,
+    cave = ''      #the code runs normally. Which it shouldn't. Also, there is an easier way
+    while cave != '1' and cave != '2':    #to write this code. I would try removing the first line,            
+        print('Which cave will you go into? (1 or 2)') #then change the while statement and add a try
+        cave = input()                               #except block with an if else statement to catch
+                                                     #inputs that aren't 1 or 2. If keeping the
+    return caves                                     #while statement the correct way to write it is
+                                                     #"while cave != 1 or 2:" Also "return caves" should be
+def checkCave(chosenCave):                           #"return cave"
+    print('You approach the cave...')
+    #sleep for 2 seconds
+    time.sleep(2)
+    print('It is dark and spooky...')
+    #sleep for 2 seconds
+    time.sleep(3)
+    print('A large dragon jumps out in front of you! He opens his jaws and...')
+    print()
+    #sleep for 2 seconds
+    time.sleep(2)
+    friendlyCave = random.randint(1, 2)
+
+    if chosenCave == str(friendlyCave):
+        print('Gives you his treasure!')
+    else:
+        print 'Gobbles you down in one bite!' #Parenthesis is missing
+
+playAgain = 'yes'
+while playAgain = 'yes' or playAgain = 'y': #Missing an extra "=" and not written correctly
+    displayIntro()                          #Should remove the second "playAgain and = sign"
+    caveNumber = choosecave()  #The second "c" in choosecave() should be capitalized
+    checkCave(caveNumber)
+    
+    print('Do you want to play again? (yes or no)') #Should create two if statements. One for 'yes' and one for 'no'
+    playAgain = input()
+    if playAgain == "no":
+        print("Thanks for planing")
